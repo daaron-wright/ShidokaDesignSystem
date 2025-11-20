@@ -1,0 +1,34 @@
+@use '../mixins/spacing.scss';
+@use '../variables/spacing.scss' as spacingVariables;
+
+//Generate padding classes
+@each $direction in spacingVariables.$spacingDirections {
+  @each $space in spacingVariables.$spacingInPixels {
+    .kd-spacing--padding-#{$direction}-#{$space} {
+      @include spacing.spacer('padding', $direction, $space);
+    }
+  }
+}
+
+//Generate margin classes
+@each $direction in spacingVariables.$spacingDirections {
+  @each $space in spacingVariables.$spacingInPixels {
+    .kd-spacing--margin-#{$direction}-#{$space} {
+      @include spacing.spacer('margin', $direction, $space);
+    }
+  }
+}
+
+.kd-spacing--page-gutter {
+  padding-left: var(--kd-page-gutter);
+  padding-right: var(--kd-page-gutter);
+}
+
+.kd-spacing--page-gutter-negative {
+  margin-left: var(--kd-page-gutter-negative);
+  margin-right: var(--kd-page-gutter-negative);
+}
+
+.kd-spacing--list-item {
+  @include spacing.list-item-spacing();
+}

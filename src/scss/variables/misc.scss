@@ -1,0 +1,16 @@
+:root {
+  --kd-background-blur-medium: blur(4px);
+  --kd-header-height: 56px;
+  --kd-header-reserved-space: var(--kd-header-height);
+  --kd-local-nav-width: 56px;
+  --kd-local-nav-width-expanded: 320px;
+  --kd-local-nav-reserved-space: calc(var(--kd-local-nav-width) + 8px);
+  --kd-local-nav-expanded-reserved-space: calc(
+    var(--kd-local-nav-width-expanded) + 8px
+  );
+  --kd-local-nav-offset-top: calc(var(--kd-header-height) + 8px + 8px);
+
+  @media (min-width: 42rem) {
+    --kd-header-reserved-space: calc(var(--kd-header-height) + 8px);
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "tokenSetOrder": [
+    "Color Palette/Color",
+    "Themes/Light",
+    "Themes/Dark",
+    "Themes/Wireframe",
+    "Deprecated/Light",
+    "Deprecated/Dark"
+  ]
+}
